@@ -1,8 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void menu()
-{
+void menu(){
         printf("\t\t Calculadora do curso C progressivo\n\n");
 
         printf("Operacoes disponiveis:\n");
@@ -12,49 +11,40 @@ void menu()
         printf("'/' : divisao\n");
         printf("'%%' : resto da divisao\n");
 
-        printf("\nDigite a express„o na forma: numero1 operador numero2\n");
-        printf("Exemplos: 1 + 1 , 2.1*3.1\n");
+        printf("\nDigite a express√£o na forma: numero1 operador numero2\n");
+        printf("Exemplos: 1 + 1 , 2.1*3.1 ...\n");
         printf("Para sair digite 0 0 0\n");
-
 }
 
-void soma(float a, float b)
-{
+void soma(float a, float b){
     printf("%.2f\n",a+b);
 }
 
-void subtracao(float a, float b)
-{
+void subtracao(float a, float b){
     printf("%.2f\n",a-b);
 }
 
-void multiplicacao(float a, float b)
-{
+void multiplicacao(float a, float b){
     printf("%.2f\n",a*b);
 }
 
-void divisao(float a, float b)
-{
+void divisao(float a, float b){
     if(b != 0)
         printf("%.2f\n",a/b);
     else
-        printf("N„o pode divisor por zero!\n");
-
+        printf("N√£o pode divisor por zero!\n");
 }
 
-void modulo(int a, int b)
-{
+void modulo(int a, int b){
     printf("%d\n",a%b);
 }
 
-void calculadora(float a, float b,char oper)
-{
+void calculadora(float a, float b,char oper){
     system("cls || clear");
 
     printf("Calculando: %.2f %c %.2f = ", a,oper,b);
 
-    switch( oper )
-        {
+    switch( oper ){
             case '+':
                     soma(a, b);
                     break;
@@ -84,8 +74,7 @@ void calculadora(float a, float b,char oper)
 
 }
 
-int main()
-{
+int main(){
     float num1, num2;
     char oper;
 
@@ -98,9 +87,7 @@ int main()
         scanf("%f", &num2);
 
         calculadora(num1, num2, oper);
-
         }
-
         while(num1 != 0 && oper != '0' && num2 != 0);
 
 }
